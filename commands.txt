@@ -1,0 +1,5 @@
+k3d cluster create api-conversao --servers 1 --agents 2 -p "8080:30000@loadbalancer"
+kubectl config use-context k3d-api-conversao
+kubectl cluster-info
+kubectl apply -f deployment.yaml 
+kubectl apply -f service.yaml 
